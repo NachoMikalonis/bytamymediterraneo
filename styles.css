@@ -121,7 +121,8 @@ h1, h2, h3, h4, .logo, .logo-footer {
     color: var(--accent-gold);
     text-transform: uppercase;
     letter-spacing: 3px;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
 }
 
 .hero-content h1 {
