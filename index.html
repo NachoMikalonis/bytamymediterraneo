@@ -1,247 +1,135 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>by Tamy Mediterráneo</title>
-<meta name="description" content="Experiencias gastronómicas mediterráneas de autor con la Chef Internacional Milca Tamara Guaita.">
-
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;1,400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
-
-<style>
-:root {
-  --bg-dark:#121212;
-  --bg-surface:#1e1e1e;
-  --text:#f2f2f2;
-  --muted:#aaaaaa;
-  --gold:#d4af37;
-}
-
-body {
-  margin:0;
-  font-family:'Montserrat', sans-serif;
-  background:var(--bg-dark);
-  color:var(--text);
-}
-
-/* NAV */
-nav {
-  position:fixed;
-  width:100%;
-  padding:20px 40px;
-  display:flex;
-  justify-content:space-between;
-  z-index:100;
-}
-
-.logo {
-  font-family:'Playfair Display', serif;
-  font-size:1.8rem;
-  font-style:italic;
-}
-
-/* HERO */
-.hero {
-  height:100vh;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  position:relative;
-}
-
-.hero img {
-  position:absolute;
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  z-index:-2;
-}
-
-.overlay {
-  position:absolute;
-  width:100%;
-  height:100%;
-  background:linear-gradient(to bottom, rgba(0,0,0,0.4), #121212);
-  z-index:-1;
-}
-
-.hero-content h1 {
-  font-family:'Playfair Display', serif;
-  font-size:3.5rem;
-}
-
-.subtitle {
-  color:var(--gold);
-  letter-spacing:2px;
-  margin-bottom:15px;
-}
-
-.cta {
-  margin-top:30px;
-  padding:15px 35px;
-  border:1px solid var(--gold);
-  color:var(--gold);
-  text-decoration:none;
-  text-transform:uppercase;
-}
-
-.cta:hover {
-  background:var(--gold);
-  color:#000;
-}
-
-/* SECTION */
-section {
-  padding:80px 10%;
-}
-
-.section-title {
-  text-align:center;
-  font-family:'Playfair Display', serif;
-  font-size:2.5rem;
-}
-
-/* CARDS */
-.grid {
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-  gap:30px;
-  margin-top:40px;
-}
-
-.card {
-  background:var(--bg-surface);
-}
-
-.card img {
-  width:100%;
-  height:220px;
-  object-fit:cover;
-}
-
-.card-content {
-  padding:25px;
-}
-
-.tag {
-  color:var(--gold);
-  font-size:0.8rem;
-}
-
-.card p {
-  color:var(--muted);
-}
-
-/* CTA SECTION */
-.cta-section {
-  text-align:center;
-}
-
-/* FOOTER */
-footer {
-  text-align:center;
-  padding:60px 20px;
-}
-
-/* WHATSAPP FLOAT */
-.whatsapp {
-  position:fixed;
-  bottom:20px;
-  right:20px;
-  background:#25D366;
-  color:white;
-  padding:15px;
-  border-radius:50%;
-  text-decoration:none;
-  font-size:20px;
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>by Tamy - Experiencias Gastronómicas</title>
+    <meta name="description" content="Descubre las exclusivas experiencias gastronómicas de la Chef Internacional Milca Tamara Guaita. Cocina mediterránea y española de autor.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
-
 <body>
 
-<nav>
-  <div class="logo">by Tamy</div>
-</nav>
+    <nav class="navbar">
+        <div class="logo">by Tamy</div>
+        <div class="nav-links">
+            <a href="#about">Conóceme</a>
+            <a href="#experiences">Experiencias</a>
+            <a href="#contact">Reserva</a>
+        </div>
+    </nav>
 
-<!-- HERO -->
-<header class="hero">
-  <img src="/images/hero.jpg">
-  <div class="overlay"></div>
-  <div class="hero-content">
-    <p class="subtitle">Chef Internacional</p>
-    <h1>Experiencias gastronómicas mediterráneas de autor, en tu mesa</h1>
-    
-    <a href="https://wa.me/541165485042?text=Hola%20Tamy,%20quiero%20consultar%20por%20una%20experiencia%20gastronómica." class="cta">
-      Reservar experiencia
+    <header class="hero">
+        <div class="hero-overlay"></div>
+        <img src="/images/hero.jpg" alt="Alta cocina mediterránea" class="hero-bg">
+        <div class="hero-content">
+            <p class="subtitle">Chef Internacional Milca Tamara Guaita</p>
+            <h1>El arte del Mediterráneo,<br>en tu mesa</h1>
+
+            <!-- CAMBIO: WhatsApp -->
+            <a href="https://wa.me/541165485042?text=Hola%20Tamy,%20quiero%20consultar%20por%20una%20experiencia%20gastronómica." class="cta-button">
+                Descubrir Experiencias
+            </a>
+        </div>
+    </header>
+
+    <section id="about" class="about-section">
+        <div class="about-container">
+            <div class="about-text">
+                <h2>La Esencia de "by Tamy"</h2>
+                <div class="divider"></div>
+                <p>Soy <strong>Milca Tamara Guaita</strong>, Chef Internacional, y mi pasión es llevarte de viaje a través de los sentidos. Tras años perfeccionando mi técnica en cocinas de todo el mundo y absorbiendo la rica cultura gastronómica de España, he consolidado mi marca registrada <strong>"by Tamy"</strong>.</p>
+                <p>Mi propuesta se basa en rescatar el alma de la cocina mediterránea española: el respeto absoluto por el ingrediente, la intensidad de los sabores tradicionales y una presentación vanguardista que convierte cada bocado en una memoria inolvidable. Te invito a mi mesa.</p>
+            </div>
+            <div class="about-image">
+                <div class="image-frame">
+                    <!-- CAMBIO -->
+                    <img src="/images/tapas.jpg" alt="Firma culinaria by Tamy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experiences" class="experiences-section">
+        <div class="section-header">
+            <h2>Experiencias Gastronómicas</h2>
+            <div class="divider center"></div>
+            <p>Selecciona el viaje culinario que deseas vivir. Cuatro propuestas únicas de pura esencia sumergida en el Mediterráneo.</p>
+        </div>
+        
+        <div class="experiences-grid">
+
+            <div class="experience-card">
+                <div class="card-image">
+                    <img src="/images/tapas.jpg" alt="Noches de Andalucía">
+                </div>
+                <div class="card-content">
+                    <h3>Noches de Andalucía</h3>
+                    <p class="tag">Tapas de Autor & Maridaje</p>
+                    <p>Un viaje por el sur de España a través de 6 tiempos de tapas. Disfruta del jamón ibérico, croquetas de rabo de toro, y sabores de herencia árabe-andaluza, todo maridado con vinos de Jerez seleccionados.</p>
+                </div>
+            </div>
+
+            <div class="experience-card">
+                <div class="card-image">
+                    <img src="/images/paella.jpg" alt="Brisa del Levante">
+                </div>
+                <div class="card-content">
+                    <h3>Brisa del Levante</h3>
+                    <p class="tag">Masterclass & Arroces</p>
+                    <p>Sumérgete en el secreto mejor guardado de Valencia. Una degustación de auténtica Paella y arroces caldosos, elaborados con mariscos frescos del día, caldos de lenta cocción y azafrán puro.</p>
+                </div>
+            </div>
+
+            <div class="experience-card">
+                <div class="card-image">
+                    <img src="/images/madrid.jpg" alt="El Alma de Madrid">
+                </div>
+                <div class="card-content">
+                    <h3>El Alma de Madrid</h3>
+                    <p class="tag">Cena Íntima de 5 Tiempos</p>
+                    <p>Revive la esencia de la capital española en tu mesa. Una cena sofisticada que reinterpreta platos clásicos, como un cochinillo deshuesado, con técnicas modernas y presentaciones teatrales de estrella Michelin.</p>
+                </div>
+            </div>
+
+            <div class="experience-card">
+                <div class="card-image">
+                    <div class="placeholder-img c-ibiza">
+                        <span class="img-text">Cocktails & Tapas</span>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h3>Atardecer en Ibiza</h3>
+                    <p class="tag">Coctelería & Chill Out</p>
+                    <p>Transforma tu evento en un atardecer balear. Disfruta de una sucesión continua de pequeños bocados frescos y cítricos, acompañados de coctelería de autor y un ambiente relajado pero altamente refinado.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer id="contact" class="footer">
+        <div class="footer-content">
+            <h2 class="logo-footer">by Tamy</h2>
+            <p>Eleva tus sentidos. Reserva tu experiencia gastronómica exclusiva.</p>
+
+            <!-- CAMBIO -->
+            <a href="https://wa.me/541165485042?text=Hola%20Tamy,%20quiero%20reservar%20una%20experiencia%20gastronómica." class="footer-btn">
+                Solicitar Reserva
+            </a>
+        </div>
+        <div class="legal">
+            <p>&copy; 2026 by Tamy. Todos los derechos reservados. Milca Tamara Guaita Chef Internacional.</p>
+        </div>
+    </footer>
+
+    <!-- BOTON WHATSAPP (nuevo) -->
+    <a href="https://wa.me/541165485042?text=Hola%20Tamy,%20quiero%20consultar%20por%20una%20experiencia." 
+       style="position:fixed;bottom:20px;right:20px;background:#25D366;color:white;padding:15px;border-radius:50%;text-decoration:none;font-size:20px;">
+       💬
     </a>
-  </div>
-</header>
-
-<!-- EXPERIENCIAS -->
-<section>
-  <h2 class="section-title">Experiencias</h2>
-
-  <div class="grid">
-
-    <div class="card">
-      <img src="/images/tapas.jpg">
-      <div class="card-content">
-        <h3>Noches de Andalucía</h3>
-        <p class="tag">Tapas & Maridaje</p>
-        <p>Viaje por el sur de España en 6 tiempos.</p>
-        <p><strong>Ideal para cenas íntimas.</strong></p>
-      </div>
-    </div>
-
-    <div class="card">
-      <img src="/images/paella.jpg">
-      <div class="card-content">
-        <h3>Brisa del Levante</h3>
-        <p class="tag">Arroces & Masterclass</p>
-        <p>Auténtica paella valenciana.</p>
-        <p><strong>Ideal para grupos y eventos.</strong></p>
-      </div>
-    </div>
-
-    <div class="card">
-      <img src="/images/madrid.jpg">
-      <div class="card-content">
-        <h3>El Alma de Madrid</h3>
-        <p class="tag">Cena 5 tiempos</p>
-        <p>Cocina española reinterpretada.</p>
-        <p><strong>Ideal para ocasiones especiales.</strong></p>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<!-- CTA -->
-<section class="cta-section">
-  <h2>¿Listo para vivir la experiencia?</h2>
-
-  <a href="https://wa.me/541165485042?text=Hola%20Tamy,%20quiero%20reservar%20una%20experiencia%20gastronómica." class="cta">
-    Consultar disponibilidad
-  </a>
-</section>
-
-<!-- FOOTER -->
-<footer>
-  <h2 class="logo">by Tamy</h2>
-  <p>Experiencias gastronómicas exclusivas</p>
-
-  <a href="https://wa.me/541165485042?text=Hola%20Tamy,%20quiero%20reservar%20una%20experiencia." class="cta">
-    Reservar tu experiencia
-  </a>
-</footer>
-
-<!-- BOTON FLOTANTE -->
-<a class="whatsapp" href="https://wa.me/541165485042?text=Hola%20Tamy,%20quiero%20consultar%20por%20una%20experiencia.">
-  💬
-</a>
 
 </body>
 </html>
