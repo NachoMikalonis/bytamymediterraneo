@@ -1,68 +1,247 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>by Tamy Mediterráneo</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;1,400&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+<title>by Tamy Mediterráneo</title>
+<meta name="description" content="Experiencias gastronómicas mediterráneas de autor con la Chef Internacional Milca Tamara Guaita.">
 
-  <style>
-    body {
-      margin: 0;
-      background: #121212;
-      color: #f2f2f2;
-      font-family: 'Montserrat', sans-serif;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      text-align: center;
-    }
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;1,400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
 
-    .container {
-      max-width: 600px;
-      padding: 20px;
-    }
+<style>
+:root {
+  --bg-dark:#121212;
+  --bg-surface:#1e1e1e;
+  --text:#f2f2f2;
+  --muted:#aaaaaa;
+  --gold:#d4af37;
+}
 
-    h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 3.5rem;
-      margin-bottom: 10px;
-      font-style: italic;
-    }
+body {
+  margin:0;
+  font-family:'Montserrat', sans-serif;
+  background:var(--bg-dark);
+  color:var(--text);
+}
 
-    .subtitle {
-      color: #d4af37;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      font-size: 0.8rem;
-      margin-bottom: 20px;
-    }
+/* NAV */
+nav {
+  position:fixed;
+  width:100%;
+  padding:20px 40px;
+  display:flex;
+  justify-content:space-between;
+  z-index:100;
+}
 
-    p {
-      color: #aaaaaa;
-      margin-bottom: 30px;
-    }
+.logo {
+  font-family:'Playfair Display', serif;
+  font-size:1.8rem;
+  font-style:italic;
+}
 
-    .badge {
-      border: 1px solid #d4af37;
-      padding: 12px 25px;
-      display: inline-block;
-      color: #d4af37;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      font-size: 0.75rem;
-    }
-  </style>
+/* HERO */
+.hero {
+  height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  position:relative;
+}
+
+.hero img {
+  position:absolute;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  z-index:-2;
+}
+
+.overlay {
+  position:absolute;
+  width:100%;
+  height:100%;
+  background:linear-gradient(to bottom, rgba(0,0,0,0.4), #121212);
+  z-index:-1;
+}
+
+.hero-content h1 {
+  font-family:'Playfair Display', serif;
+  font-size:3.5rem;
+}
+
+.subtitle {
+  color:var(--gold);
+  letter-spacing:2px;
+  margin-bottom:15px;
+}
+
+.cta {
+  margin-top:30px;
+  padding:15px 35px;
+  border:1px solid var(--gold);
+  color:var(--gold);
+  text-decoration:none;
+  text-transform:uppercase;
+}
+
+.cta:hover {
+  background:var(--gold);
+  color:#000;
+}
+
+/* SECTION */
+section {
+  padding:80px 10%;
+}
+
+.section-title {
+  text-align:center;
+  font-family:'Playfair Display', serif;
+  font-size:2.5rem;
+}
+
+/* CARDS */
+.grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:30px;
+  margin-top:40px;
+}
+
+.card {
+  background:var(--bg-surface);
+}
+
+.card img {
+  width:100%;
+  height:220px;
+  object-fit:cover;
+}
+
+.card-content {
+  padding:25px;
+}
+
+.tag {
+  color:var(--gold);
+  font-size:0.8rem;
+}
+
+.card p {
+  color:var(--muted);
+}
+
+/* CTA SECTION */
+.cta-section {
+  text-align:center;
+}
+
+/* FOOTER */
+footer {
+  text-align:center;
+  padding:60px 20px;
+}
+
+/* WHATSAPP FLOAT */
+.whatsapp {
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#25D366;
+  color:white;
+  padding:15px;
+  border-radius:50%;
+  text-decoration:none;
+  font-size:20px;
+}
+</style>
 </head>
 
 <body>
-  <div class="container">
-    <h1>by Tamy</h1>
-    <div class="subtitle">Mediterráneo</div>
-    <p>Experiencias gastronómicas de autor.<br>Muy pronto podrás vivir el viaje.</p>
-    <div class="badge">Sitio en construcción</div>
+
+<nav>
+  <div class="logo">by Tamy</div>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <img src="/images/hero.jpg">
+  <div class="overlay"></div>
+  <div class="hero-content">
+    <p class="subtitle">Chef Internacional</p>
+    <h1>Experiencias gastronómicas mediterráneas de autor, en tu mesa</h1>
+    
+    <a href="https://wa.me/541165485042?text=Hola%20Tamy,%20quiero%20consultar%20por%20una%20experiencia%20gastronómica." class="cta">
+      Reservar experiencia
+    </a>
   </div>
+</header>
+
+<!-- EXPERIENCIAS -->
+<section>
+  <h2 class="section-title">Experiencias</h2>
+
+  <div class="grid">
+
+    <div class="card">
+      <img src="/images/tapas.jpg">
+      <div class="card-content">
+        <h3>Noches de Andalucía</h3>
+        <p class="tag">Tapas & Maridaje</p>
+        <p>Viaje por el sur de España en 6 tiempos.</p>
+        <p><strong>Ideal para cenas íntimas.</strong></p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="/images/paella.jpg">
+      <div class="card-content">
+        <h3>Brisa del Levante</h3>
+        <p class="tag">Arroces & Masterclass</p>
+        <p>Auténtica paella valenciana.</p>
+        <p><strong>Ideal para grupos y eventos.</strong></p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="/images/madrid.jpg">
+      <div class="card-content">
+        <h3>El Alma de Madrid</h3>
+        <p class="tag">Cena 5 tiempos</p>
+        <p>Cocina española reinterpretada.</p>
+        <p><strong>Ideal para ocasiones especiales.</strong></p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <h2>¿Listo para vivir la experiencia?</h2>
+
+  <a href="https://wa.me/541165485042?text=Hola%20Tamy,%20quiero%20reservar%20una%20experiencia%20gastronómica." class="cta">
+    Consultar disponibilidad
+  </a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <h2 class="logo">by Tamy</h2>
+  <p>Experiencias gastronómicas exclusivas</p>
+
+  <a href="https://wa.me/541165485042?text=Hola%20Tamy,%20quiero%20reservar%20una%20experiencia." class="cta">
+    Reservar tu experiencia
+  </a>
+</footer>
+
+<!-- BOTON FLOTANTE -->
+<a class="whatsapp" href="https://wa.me/541165485042?text=Hola%20Tamy,%20quiero%20consultar%20por%20una%20experiencia.">
+  💬
+</a>
+
 </body>
 </html>
